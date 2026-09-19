@@ -38,10 +38,6 @@ blink --help
 
 This extension does not collect telemetry or send data to a remote service. It only starts the locally installed Blink CLI for files you explicitly choose from the VS Code Explorer.
 
-## AI-assisted development
-
-This extension was created with the assistance of AI. I originally made it for personal use because I only needed a small VS Code integration for Blink and did not have a practical reason to learn another language just to build it. I decided to publish it in case the same workflow is useful to other Roblox developers as well.
-
 ## Disclaimer
 
 This community extension is not affiliated with or endorsed by the Blink project or its maintainers. Blink is a third-party project and is not bundled with this extension.

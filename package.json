@@ -7,6 +7,14 @@
   "engines": {
     "vscode": "^1.90.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonl000/blink-context-tools.git"
+  },
+  "homepage": "https://github.com/antonl000/blink-context-tools#readme",
+  "bugs": {
+    "url": "https://github.com/antonl000/blink-context-tools/issues"
+  },
   "categories": [
     "Other"
   ],
