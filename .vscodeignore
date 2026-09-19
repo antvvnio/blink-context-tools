@@ -1,0 +1,7 @@
+.vscode/**
+.git/**
+.gitignore
+*.vsix
+*.zip
+*.ps1
+**/*.svg

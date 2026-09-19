@@ -1,0 +1,111 @@
+{
+  "name": "blink-context-tools",
+  "displayName": "Blink Context Tools",
+  "description": "Explorer context-menu tools for generating and watching Blink networking files for Roblox.",
+  "version": "0.1.10",
+  "publisher": "antvvnio",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "roblox",
+    "blink",
+    "networking",
+    "luau",
+    "rojo"
+  ],
+  "main": "./extension.js",
+  "icon": "icons/logo.png",
+  "license": "MIT",
+  "contributes": {
+    "commands": [
+      {
+        "command": "blinkContext.generateSelected",
+        "title": "Blink: Generate"
+      },
+      {
+        "command": "blinkContext.watchSelected",
+        "title": "Blink: Watch"
+      },
+      {
+        "command": "blinkContext.stopWatchSelected",
+        "title": "Blink: Stop Watch"
+      },
+      {
+        "command": "blinkContext.generateAll",
+        "title": "Blink: Generate All"
+      },
+      {
+        "command": "blinkContext.watchAll",
+        "title": "Blink: Watch All"
+      },
+      {
+        "command": "blinkContext.stopWatchAll",
+        "title": "Blink: Stop Watching All"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "blinkContext.generateSelected",
+          "when": "resourceExtname == .blink && !explorerResourceIsFolder",
+          "group": "blink@100"
+        },
+        {
+          "command": "blinkContext.watchSelected",
+          "when": "resourceExtname == .blink && !explorerResourceIsFolder",
+          "group": "blink@100"
+        },
+        {
+          "command": "blinkContext.stopWatchSelected",
+          "when": "resourceExtname == .blink && !explorerResourceIsFolder && blinkContext.hasWatchers",
+          "group": "blink@100"
+        },
+        {
+          "command": "blinkContext.generateAll",
+          "when": "explorerResourceIsFolder",
+          "group": "blink@100"
+        },
+        {
+          "command": "blinkContext.watchAll",
+          "when": "explorerResourceIsFolder",
+          "group": "blink@100"
+        },
+        {
+          "command": "blinkContext.stopWatchAll",
+          "when": "explorerResourceIsFolder && blinkContext.hasWatchers",
+          "group": "blink@100"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "blinkContext.generateSelected",
+          "when": "false"
+        },
+        {
+          "command": "blinkContext.watchSelected",
+          "when": "false"
+        },
+        {
+          "command": "blinkContext.stopWatchSelected",
+          "when": "false"
+        },
+        {
+          "command": "blinkContext.generateAll",
+          "when": "false"
+        },
+        {
+          "command": "blinkContext.watchAll",
+          "when": "false"
+        },
+        {
+          "command": "blinkContext.stopWatchAll",
+          "when": "false"
+        }
+      ]
+    }
+  }
+}
